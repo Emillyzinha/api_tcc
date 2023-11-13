@@ -1,0 +1,172 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "oi",
+        "olá",
+        "bom dia"
+      ],
+      "responses": [
+        "Ola! Obrigada pela visita.",
+        "Bom-dia, e bom te ver."
+      ]
+    },
+    {
+      "tag": "documentacao",
+      "patterns": [
+        "mande",
+        "documentacoes",
+        "mandando",
+        "docs",
+        "envie"
+      ],
+      "responses": [
+        "Aqui está nossas documentações: https://eppg.fgv.br/sites/default/files/teste.pdf"
+      ]
+    },
+    {
+      "tag": "erro",
+      "patterns": [
+        " "
+      ],
+      "responses": [
+        "Desculpe não entendi sua pergunta"
+      ]
+    },
+
+        {
+      "tag": "solicitacao",
+      "patterns": [
+        "solicitar",
+        "corporativo",
+        "cartao",
+        "corporate",
+        "pedir",
+        "requisitar"
+
+      ],
+      "responses": [
+        "Para solicitar o cartão Corporate, deverá abrir Workon através do link (https://rb-wam-ap.bosch.com/workon01am/secure/CreateIssue.jspa?pid=10231&issuetype=73). É obrigatório estar aprovado conforme a diretriz, treinamento e termo anexado. Após a aprovação do Workon, o prazo de entrega do cartão é de 10 dias úteis no endereço informado."
+      ]
+    },
+    {
+      "tag": "relatorio",
+      "patterns": [
+        "relatorio",
+        "envio",
+        "fisico",
+        "necessario",
+        "enviar",
+        "mandar"
+      ],
+      "responses": [
+        "Sim, em nossa região ainda é obrigatório o envio das notas fiscais e recibos fisicamente conforme exigência legal determinada por TAX. "
+      ]
+    },
+    {
+      "tag": "portal_pj",
+      "patterns": [
+        "portal",
+        "pj",
+        "mensagem",
+        "dados",
+        "não",
+        "conferem"
+      ],
+      "responses": [
+        "Para atualização de cadastro, deverá abrir Workon solicitando a alteração de cadastro e o prazo do banco é 1 dia útil após aprovação do Workon https://www.bradescocartoespj.com.br/login/, ou ao app \"Bradesco Cartões PJ\" neste portal é possível desbloquear cartão novo, visualizar senha, status do cartão, limites, bloqueios e extrato."
+      ]
+    },
+        {
+      "tag": "RPS",
+      "patterns": [
+        "rps",
+        "recibo",
+        "provisorio"
+      ],
+      "responses": [
+        "É o recibo provisório de serviços é um documento que substitui temporariamente a nota fiscal de serviços, contendo campos do tomador e do prestador de serviço. O RPS é válido por até 10 dias a contar da data de sua emissão. Após este prazo, para assuntos legais é obrigatório utilizar a NFS-e. Se acaso, a nota fiscal não estiver disponível no site da prefeitura, a tentativa de conversão do RPS é válida para apresentação de justificativa de despesa."
+      ]
+    },
+    {
+      "tag": "desbloqueio_cartao",
+      "patterns": [
+        "cartao",
+        "bloqueado",
+        "desbloquear",
+        "estou"
+      ],
+      "responses": [
+        "Caso não haja relatório em aberto pendente de entrega, o desbloqueio deve ser solicitado através do Workon e seu prazo para desbloqueio é de até 05 dias úteis após aprovação do Workon. Porém, antes da abertura, certifique-se que você tenha acesso ao portal PJ https://www.bradescocartoespj.com.br/login/, ou ao app \"Bradesco Cartões PJ\" neste portal é possível desbloquear cartão novo, visualizar senha, status do cartão, limites, bloqueios e extrato, ou através do telefone 4002 0022."
+      ]
+    },
+    {
+      "tag": "recibo_simples",
+      "patterns": [
+        "recibo",
+        "simples",
+        "conter"
+      ],
+      "responses": [
+        "O recibo simples para justificativa de despesa deverá apresentar data, nome do estabelecimento, morada e identificação fiscal, telefone, e-mail e descrição da despesa, não sendo válido comanda como justificativa de despesa."
+      ]
+    },
+    {
+      "tag": "tabela_diaria",
+      "patterns": [
+        "acesso",
+        "tabela",
+        "diaria",
+        "dedutivel",
+        "preencher"
+      ],
+      "responses": [
+        "A tabela de diária dedutível pode ser encontrada na PR05, na aba “extrato” e tabelas de diárias. Após a abertura do Excel, há o campo de “Como preencher a tabela”. Neste manual está detalhado de como preencher e o que constar na tabela, lembrando que, nesta tabela deve conter os gastos como refeição, farmácia, telefone, internet, taxas de entrega/delivery de refeição e lavanderia."
+        ]
+    },
+    {
+      "tag": "entrega_relatorio",
+      "patterns": [
+        "tempo",
+        "hábil",
+        "entrega",
+        "relatorio",
+        "habil"
+      ],
+      "responses": [
+        "Após a abertura do período na PR05, o prazo para a entrega do relatório conforme OT 168, é de 40 dias úteis."
+      ]
+    },
+    {
+      "tag": "devolucao_relatorio",
+      "patterns": [
+        "relatorio",
+        "relatório",
+        "divergência",
+        "divergencia",
+        "errado",
+        "devolução",
+        "devoluçao",
+        "devolucao",
+        "devolver"
+      ],
+      "responses": [
+        "Caso tenha sido encontrado divergências em seu relatório, o time do cartão Corporate faz a abertura de Workon ao usuário com cópia ao gestor de aprovação, detalhando o acontecido e orientando a ação que deverá ser tomada. Após correção, o relatório é liberado para andamento do processo. Vale ressaltar que, o relatório físico permanece com o time de cartão e as ações de correção ocorrem através do Workon ou SAP, a não ser que seja necessário o envio físico para o usuário"
+      ]
+    },
+    {
+      "tag": "correcao_workon",
+      "patterns": [
+        "prazo",
+        "workon",
+        "relatorio",
+        "correcao",
+        "errado"
+      ],
+      "responses": [
+        "O prazo para correção do relatório por parte do usuário é de 03 dias úteis após abertura do Workon. Após este período, se for constatado pelo time do cartão que a ação corretiva não foi efetuado pelo colaborador, é encaminhado para bloqueio temporário do cartão corporativo. "
+      ]
+    }
+  ]
+}

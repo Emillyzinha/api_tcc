@@ -1,35 +1,6 @@
 from rest_framework import serializers
-from ..models import Palavras, Resposta, Pergunta, Usuario, Treinamentos, Imagens, Questionario
+from ..models import *
 
-
-class LuizaSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Palavras
-        fields = '__all__'
-
-
-class RespostaSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Resposta
-        fields = '__all__'
-
-
-class PerguntaSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Pergunta
-        fields = '__all__'
-
-
-class CreateResponseSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Pergunta
-        fields = ["pergunta"]
-
-
-# class PerguntasFuturasSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = PerguntasFuturas
-#         fields = '__all__'
 
 class UsuarioSerializer(serializers.ModelSerializer):
     class Meta:
@@ -52,4 +23,16 @@ class ImagensSerializer(serializers.ModelSerializer):
 class QuestionarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = Questionario
+        fields = "__all__"
+
+
+class DocumentosSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Documentos
+        fields = "__all__"
+
+
+class ChatSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Chat
         fields = "__all__"

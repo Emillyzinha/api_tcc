@@ -20,7 +20,7 @@ from django.urls import path, include
 
 from rest_framework import routers
 from api.viewsets import viewsets
-from api.views import CreateResponseView, CadastroView
+from api.views import CadastroView
 from rest_framework_simplejwt import views as jwt_views
 
 from main import settings
@@ -28,20 +28,17 @@ from main import settings
 route = routers.DefaultRouter()
 
 
-route.register(r'json',viewsets.LuizaViewset, basename='Luiza')
-route.register(r'respostas',viewsets.RespostaViewset, basename='respostas')
-route.register(r'perguntas',viewsets.PerguntaViewset, basename='perguntas')
 # route.register(r'perguntas_futuras',viewsets.PerguntasFuturasViewset, basename='perguntas_futuras')
 # route.register(r'cadastro',viewsets.UsuarioViewset, basename='cadastro')
 route.register(r'treinamento', viewsets.TreinamentoViewSet, basename='treinamento')
 route.register(r'imagens', viewsets.ImageViewSet, basename='imagens')
 route.register(r'questionario', viewsets.QuestionarioViewset, basename='questionario')
-
+route.register(r'documentos', viewsets.DocumentosViewset, basename="documentos")
+route.register(r'chat', viewsets.ChatViewset, basename="chat")
 
 urlpatterns = [
     path('', include(route.urls)),
     path('admin/', admin.site.urls),
-    path('chatbot/', CreateResponseView.as_view()),
     path('cadastro/', CadastroView.as_view()),
     path('login/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh')
